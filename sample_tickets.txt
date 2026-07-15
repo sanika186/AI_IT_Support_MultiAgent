@@ -1,0 +1,21 @@
+VPN is not connecting after Windows update.
+
+Forgot my office password.
+
+Printer is offline.
+
+Outlook crashes while opening.
+
+Cannot connect to office WiFi.
+
+Software installation failed.
+
+Blue screen error after startup.
+
+Bluetooth is not working.
+
+Camera is not working.
+
+Microphone is not working.
+
+Computer is running very slow.
