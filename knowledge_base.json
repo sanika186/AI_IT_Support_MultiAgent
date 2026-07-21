@@ -1,0 +1,195 @@
+{
+  "VPN": {
+    "possible_causes": [
+      "VPN service is stopped",
+      "Incorrect login credentials",
+      "Internet connection issue",
+      "Firewall blocking VPN",
+      "VPN client is outdated"
+    ],
+    "solutions": [
+      "Restart the VPN client",
+      "Restart the VPN service",
+      "Check internet connection",
+      "Verify username and password",
+      "Update the VPN application"
+    ],
+    "priority": "High"
+  },
+
+  "Outlook": {
+    "possible_causes": [
+      "Corrupted Outlook profile",
+      "Add-ins causing crash",
+      "Mailbox is full",
+      "Application not updated"
+    ],
+    "solutions": [
+      "Restart Outlook",
+      "Disable add-ins",
+      "Repair Outlook profile",
+      "Update Microsoft Office"
+    ],
+    "priority": "Medium"
+  },
+
+  "Printer": {
+    "possible_causes": [
+      "Printer is offline",
+      "Paper jam",
+      "Driver issue",
+      "Network connection problem"
+    ],
+    "solutions": [
+      "Restart the printer",
+      "Check printer connection",
+      "Clear paper jam",
+      "Reinstall printer driver"
+    ],
+    "priority": "Low"
+  },
+
+  "Password": {
+    "possible_causes": [
+      "Forgot password",
+      "Password expired",
+      "Account locked"
+    ],
+    "solutions": [
+      "Reset password",
+      "Unlock account",
+      "Contact IT administrator"
+    ],
+    "priority": "Medium"
+  },
+
+  "WiFi": {
+    "possible_causes": [
+      "Weak signal",
+      "Router issue",
+      "Network adapter disabled",
+      "Incorrect WiFi password"
+    ],
+    "solutions": [
+      "Restart router",
+      "Reconnect to WiFi",
+      "Enable network adapter",
+      "Forget and reconnect network"
+    ],
+    "priority": "High"
+  },
+
+  "Software Installation": {
+    "possible_causes": [
+      "No administrator permission",
+      "Corrupted installer",
+      "Low disk space",
+      "Antivirus blocked installation"
+    ],
+    "solutions": [
+      "Run installer as administrator",
+      "Download installer again",
+      "Free disk space",
+      "Temporarily disable antivirus"
+    ],
+    "priority": "Medium"
+  },
+
+  "Blue Screen": {
+    "possible_causes": [
+      "Hardware failure",
+      "Corrupted drivers",
+      "Windows update issue",
+      "Memory error"
+    ],
+    "solutions": [
+      "Restart computer",
+      "Update drivers",
+      "Run Windows diagnostics",
+      "Contact IT support immediately"
+    ],
+    "priority": "High"
+  },
+
+  "Bluetooth": {
+    "possible_causes": [
+      "Bluetooth is turned off",
+      "Device is out of range",
+      "Bluetooth driver is outdated",
+      "The device is not paired properly"
+    ],
+    "solutions": [
+      "Turn on Bluetooth",
+      "Move the device closer",
+      "Update the Bluetooth driver",
+      "Remove the device and pair it again"
+    ],
+    "priority": "Medium"
+  },
+
+  "Slow Computer": {
+    "possible_causes": [
+      "Too many background applications",
+      "Low disk space",
+      "Insufficient RAM",
+      "Virus or malware"
+    ],
+    "solutions": [
+      "Restart the computer",
+      "Close unnecessary applications",
+      "Free up disk space",
+      "Run an antivirus scan"
+    ],
+    "priority": "Medium"
+  },
+
+  "Camera": {
+    "possible_causes": [
+      "Camera permission disabled",
+      "Driver issue",
+      "Camera in use by another application"
+    ],
+    "solutions": [
+      "Enable camera permission",
+      "Restart the application",
+      "Update the camera driver",
+      "Restart the computer"
+    ],
+    "priority": "Medium"
+  },
+
+  "Microphone": {
+    "possible_causes": [
+      "Muted microphone",
+      "Permission disabled",
+      "Driver issue"
+    ],
+    "solutions": [
+      "Unmute the microphone",
+      "Allow microphone permission",
+      "Update the audio driver",
+      "Restart the application"
+    ],
+    "priority": "Medium"
+  },
+
+
+"Battery": {
+  "possible_causes": [
+    "High screen brightness",
+    "Too many background applications",
+    "Battery Saver is disabled",
+    "Battery health has degraded",
+    "Power-hungry applications are running"
+  ],
+  "solutions": [
+    "Reduce screen brightness",
+    "Close unnecessary background applications",
+    "Enable Battery Saver mode",
+    "Check battery health in system settings",
+    "Update battery and chipset drivers",
+    "Replace the battery if its health is poor"
+  ],
+  "priority": "Medium"
+}
+}
