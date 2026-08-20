@@ -8,7 +8,9 @@ from utils import get_issue_details
 
 class ITSupportState(TypedDict):
     user_issue: str
+    uploaded_image: object
     category: str
+    issue_details: dict
     final_response: str
 
 
@@ -17,13 +19,13 @@ class ITSupportState(TypedDict):
 # -----------------------------
 def classify_node(state: ITSupportState):
 
-    category = classify_issue(state["user_issue"]).strip()
+    issue = state["user_issue"]
+    category = classify_issue(issue)
 
     return {
-        "category": category
+        "category": category,
+        "user_issue": issue
     }
-
-
 # -----------------------------
 # Agent 2 : Solution Generator
 # -----------------------------
@@ -37,6 +39,7 @@ def solution_node(state: ITSupportState):
     )
 
     return {
+        "issue_details": details,
         "final_response": final_response
     }
 

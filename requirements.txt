@@ -1,4 +1,5 @@
-google-genai
+streamlit
 langgraph
-langchain
+google-genai
 python-dotenv
+Pillow

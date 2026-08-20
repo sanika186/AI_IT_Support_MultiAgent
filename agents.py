@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from google import genai
+from PIL import Image
 
 load_dotenv()
 
@@ -33,70 +34,86 @@ def classify_issue(user_issue):
         return "Camera"
     elif "microphone" in issue or "mic" in issue or "audio" in issue:
         return "Microphone"
-    elif ("slow" in issue or "lag" in issue  or "hanging" in issue or "cpu" in issue or "performance" in issue):  
+    elif (
+        "battery" in issue
+        or "charging" in issue
+        or "charge" in issue
+        or "battery drain" in issue
+        or "draining" in issue
+        or "low battery" in issue
+    ):
+        return "Battery"
+    elif (
+        "slow" in issue
+        or "lag" in issue
+        or "hanging" in issue
+        or "cpu" in issue
+        or "performance" in issue
+    ):
         return "Slow Computer"
     else:
         return "Unknown"
 
+
 def generate_solution(category, issue_details):
 
-    possible_causes = "\n".join(
-        f"- {cause}" for cause in issue_details["possible_causes"]
-    )
+    possible_causes = ""
+    for cause in issue_details["possible_causes"]:
+        possible_causes += f"- {cause}\n"
 
-    solutions = "\n".join(
-        f"{i+1}. {solution}"
-        for i, solution in enumerate(issue_details["solutions"])
-    )
+    solutions = ""
+    for i, solution in enumerate(issue_details["solutions"], 1):
+        solutions += f"{i}. {solution}\n"
 
     prompt = f"""
 You are an IT Support Assistant.
 
-Prepare a simple troubleshooting response.
+The user has reported a {category} issue.
 
-Rules:
-- No email format.
-- No Subject.
-- No Dear User.
-- No Best Regards.
-- No markdown (**).
-- Use simple English.
-- Maximum 12 lines.
+Write ONLY a short troubleshooting summary in 2-3 lines.
 
-Use exactly this format:
-
-Issue Category: {category}
-Priority: {issue_details["priority"]}
-
-Possible Causes:
-{possible_causes}
-
-Suggested Solutions:
-{solutions}
-
-If the issue continues, contact the IT Support Team.
+Do not include:
+- Issue Category
+- Priority
+- Possible Causes
+- Suggested Solutions
+- Greetings
+- Markdown
 """
 
     try:
-
         response = client.models.generate_content(
-            model="gemini-3.5-flash",
+            model="gemini-2.5-flash",
             contents=prompt
         )
 
-        return response.text.strip()
+        summary = response.text.strip()
 
     except Exception:
+        summary = "Please follow the troubleshooting steps."
 
-        return f"""
-Issue Category: {category}
-Priority: {issue_details["priority"]}
+    final_response = f"""
+**📌 Issue Category**
 
-Possible Causes:
+{category}
+
+**🔍 Possible Causes**
+
 {possible_causes}
 
-Suggested Solutions:
+**🛠 Suggested Solutions**
+
 {solutions}
+
+**🤖 AI Recommendation**
+
+{summary}
 
 If the issue continues, contact the IT Support Team.
 """
+
+    return final_response
+
+
+def analyze_screenshot(uploaded_file):
+    return ""

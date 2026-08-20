@@ -171,7 +171,58 @@
       "Restart the application"
     ],
     "priority": "Medium"
-  }
+  },
+
+
+"Battery": {
+  "possible_causes": [
+    "High screen brightness",
+    "Too many background applications",
+    "Battery Saver is disabled",
+    "Battery health has degraded",
+    "Power-hungry applications are running"
+  ],
+  "solutions": [
+    "Reduce screen brightness",
+    "Close unnecessary background applications",
+    "Enable Battery Saver mode",
+    "Check battery health in system settings",
+    "Update battery and chipset drivers",
+    "Replace the battery if its health is poor"
+  ],
+  "priority": "Medium"
 }
 
+,
+"Hardware": {
+  "possible_causes": [
+    "Faulty hardware component",
+    "Loose cable connection",
+    "Overheating",
+    "Hardware aging or physical damage"
+  ],
+  "solutions": [
+    "Restart the computer",
+    "Check all hardware connections",
+    "Run hardware diagnostics",
+    "Replace the faulty hardware if required",
+    "Contact the IT support team"
+  ],
+  "priority": "High"
+},
 
+"General IT Support": {
+  "possible_causes": [
+    "Unknown system issue",
+    "Configuration problem",
+    "Temporary software glitch"
+  ],
+  "solutions": [
+    "Restart the system",
+    "Check for software updates",
+    "Verify system settings",
+    "Contact the IT support team if the issue persists"
+  ],
+  "priority": "Medium"
+}
+}
